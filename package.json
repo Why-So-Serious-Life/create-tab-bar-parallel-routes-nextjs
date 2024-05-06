@@ -1,0 +1,51 @@
+{
+    "name": "create-tab-bar-parallel-routes-nextjs",
+    "version": "0.20.0",
+    "description": "Web app for the tallileo platform.",
+    "homepage": "https://app.tallileo.com",
+    "main": "index.js",
+    "scripts": {
+        "dev": "next dev -p 3001",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint . --ext .ts",
+        "stylelint": "stylelint '**/*.scss'",
+        "stylelint-scss-check": "stylelint-config-prettier-scss-check",
+        "lint-and-fix": "eslint . --ext .ts --fix",
+        "prettier-format": "prettier --config .prettierrc 'src/**/*.ts' --write"
+    },
+    "keywords": [],
+    "author": "Aayush Goyal",
+    "license": "ISC",
+    "dependencies": {
+        "next": "^14.1.2",
+        "postcss-scss": "^4.0.9",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "typescript": "^5.4.3",
+        "zustand": "^4.5.2"
+    },
+    "devDependencies": {
+        "@types/node": "20.12.8",
+        "@types/react": "^18.2.74",
+        "@typescript-eslint/eslint-plugin": "^7.5.0",
+        "@typescript-eslint/parser": "^7.5.0",
+        "eslint": "^8.57.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-prettier": "^9.1.0",
+        "eslint-plugin-import": "^2.29.1",
+        "eslint-plugin-jsx-a11y": "^6.8.0",
+        "eslint-plugin-prettier": "^5.1.3",
+        "eslint-plugin-react": "^7.34.1",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "husky": "^9.0.11",
+        "postcss": "^8.4.38",
+        "prettier": "^3.2.4",
+        "sass": "^1.72.0"
+    },
+    "husky": {
+        "hooks": {
+            "pre-commit": "yarn run prettier-format && yarn run lint"
+        }
+    }
+}

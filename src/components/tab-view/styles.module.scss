@@ -1,0 +1,25 @@
+.tabBar {
+  display: flex;
+}
+
+%tab {
+  height: 48px;
+  flex: 1;
+  background-color: #F7B6D4;
+  border: none;
+  cursor: pointer;
+}
+
+.tab__inactive {
+  @extend %tab;
+}
+
+.tab__active {
+  @extend %tab;
+
+  border-bottom: solid 2px #B0005C;
+}
+
+.tabContent {
+  padding: 32px 80px;
+}
